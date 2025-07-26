@@ -1,4 +1,9 @@
 import CourseChecklist from "@/components/course-checklist";
+import CourseDetails from "@/components/course-details";
+import CourseExclusiveFeatures from "@/components/course-exclusive-features";
+import CourseFeatures from "@/components/course-features";
+import CourseInstructor from "@/components/course-instructor";
+import CoursePointer from "@/components/course-pointer";
 import HeroSection from "@/components/hero-section";
 import MobilePriceCTA from "@/components/mobile-price-cta";
 import RightSidebar from "@/components/right-sidebar";
@@ -6,6 +11,26 @@ import { getCourseData } from "@/lib/api";
 
 export default async function Home() {
   const courseData = await getCourseData();
+
+  const instructor = courseData.sections.find(
+    (section) => section.type === "instructors"
+  );
+
+  const courseFeatures = courseData.sections.find(
+    (section) => section.type === "features"
+  );
+
+  const pointers = courseData.sections.find(
+    (section) => section.type === "pointers"
+  );
+
+  const exclusiveFeatures = courseData.sections.find(
+    (section) => section.type === "feature_explanations"
+  );
+
+  const courseDetails = courseData.sections.find(
+    (section) => section.type === "about"
+  );
 
   return (
     <main className="mb-28 md:mb-0">
@@ -30,6 +55,13 @@ export default async function Home() {
       <MobilePriceCTA ctaText={courseData.cta_text} />
       <div className="md:hidden">
         <CourseChecklist checklist={courseData.checklist} />
+      </div>
+
+      {/* Main Content */}
+      <div className="w-full lg:w-[70%]">
+        {/* Instructor Details */}
+        {/* @ts-ignore */}
+        <CourseInstructor courseInstructor={instructor} />
       </div>
 
       {/* Right Sidebar */}
