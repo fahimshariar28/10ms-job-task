@@ -1,6 +1,7 @@
 import CourseChecklist from "@/components/course-checklist";
 import HeroSection from "@/components/hero-section";
 import MobilePriceCTA from "@/components/mobile-price-cta";
+import RightSidebar from "@/components/right-sidebar";
 import { getCourseData } from "@/lib/api";
 
 export default async function Home() {
@@ -30,6 +31,13 @@ export default async function Home() {
       <div className="md:hidden">
         <CourseChecklist checklist={courseData.checklist} />
       </div>
+
+      {/* Right Sidebar */}
+      <RightSidebar
+        media={courseData.media}
+        checklist={courseData.checklist}
+        cta_text={courseData.cta_text}
+      />
     </main>
   );
 }
