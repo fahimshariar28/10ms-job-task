@@ -74,6 +74,10 @@ export default async function Home() {
         {/* Exclusive Features */}
         {/* @ts-ignore */}
         <CourseExclusiveFeatures courseExclusiveFeatures={exclusiveFeatures} />
+
+        {/* Course Details */}
+        {/* @ts-ignore */}
+        <CourseDetails courseDetails={courseDetails} />
       </div>
 
       {/* Right Sidebar */}
