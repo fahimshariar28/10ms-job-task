@@ -66,6 +66,10 @@ export default async function Home() {
         {/* Course Features */}
         {/* @ts-ignore */}
         <CourseFeatures courseFeatures={courseFeatures} />
+
+        {/* Course Pointer */}
+        {/* @ts-ignore */}
+        <CoursePointer coursePointer={pointers} />
       </div>
 
       {/* Right Sidebar */}
