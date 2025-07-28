@@ -48,7 +48,7 @@ export default function RightSidebar({
       {/* Absolute Sidebar */}
       <div
         ref={sidebarRef}
-        className="hidden md:block absolute md:top-0 lg:top-8 md:right-2 lg:right-16"
+        className="hidden md:block absolute top-8 md:right-2 lg:right-16 md:w-80 lg:w-96"
       >
         <div className="bg-white border border-gray-300 border-b-0">
           <MediaSection media={media} />

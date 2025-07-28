@@ -58,7 +58,7 @@ export default function MediaSection({ media }: { media: Medium[] }) {
     `https://img.youtube.com/vi/${selectedMedia.resource_value}/hqdefault.jpg`;
 
   return (
-    <div className="w-screen px-5 md:p-2 md:w-sm mt-2 md:mt-0">
+    <div className="px-5 md:p-2 w-screen md:w-xs lg:w-sm mt-2 md:mt-0">
       <div className="relative">
         {/* Main Preview Section */}
         <div className="overflow-hidden text-card-foreground shadow-sm">

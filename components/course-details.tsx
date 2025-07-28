@@ -17,7 +17,7 @@ export default function CourseDetails({ courseDetails }: CourseDetailsProps) {
   const courseDetailsData = courseDetails.values;
 
   const [expandedSection, setExpandedSection] = useState<string | null>(
-    "target"
+    courseDetailsData[0]?.id || null
   );
 
   const toggleSection = (section: string) => {
@@ -25,12 +25,12 @@ export default function CourseDetails({ courseDetails }: CourseDetailsProps) {
   };
 
   return (
-    <section className="my-5 mx-5 md:mx-24">
+    <section className="my-5 mx-5 md:mx-2 lg:mx-24">
       <h2 className="text-2xl mt-4 font-semibold text-black mb-2 md:mb-8">
         {courseDetails.name}
       </h2>
 
-      <div className="space-y-4 md:border border-gray-300 rounded-lg md:px-6 md:py-3">
+      <div className="space-y-4 md:border border-gray-300 rounded-lg md:px-2 lg:px-6 md:py-3">
         {courseDetailsData.map((item, index) => (
           <div
             key={item.id}

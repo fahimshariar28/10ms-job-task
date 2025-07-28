@@ -10,7 +10,7 @@ export default function CourseExclusiveFeatures({
   courseExclusiveFeatures,
 }: CourseExclusiveFeaturesProps) {
   return (
-    <section className="my-5 mx-5 md:mx-24 ">
+    <section className="my-5 mx-5 md:mx-2 lg:mx-24">
       <h2 className="text-xl mt-4 font-semibold text-gray-900 mb-2 md:mb-8">
         {courseExclusiveFeatures.name}
       </h2>
@@ -18,7 +18,7 @@ export default function CourseExclusiveFeatures({
       <div className="bg-white overflow-hidden border border-gray-300 rounded-lg px-3 py-3">
         {courseExclusiveFeatures.values.map((feature, index) => (
           <div key={feature.id}>
-            <div className="py-4 grid md:grid-cols-2 items-center gap-6 md:gap-8">
+            <div className="py-4 grid md:grid-cols-2 items-center gap-6 md:gap-2 lg:gap-8">
               <div className="space-y-4">
                 <p>{feature.title}</p>
                 <ul className="space-y-2">

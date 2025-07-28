@@ -7,12 +7,12 @@ export default function CourseFeatures({
   courseFeatures,
 }: CourseFeaturesProps) {
   return (
-    <section className="my-5 mx-5 md:mx-24">
+    <section className="my-5 mx-5 md:mx-2 lg:mx-24">
       <h2 className="text-xl font-semibold mt-4 text-gray-900 mb-8">
         {courseFeatures.name}
       </h2>
 
-      <div className="bg-slate-800 rounded-lg p-6">
+      <div className="bg-slate-800 rounded-lg py-6 px-2">
         <div className="grid md:grid-cols-2 gap-6">
           {courseFeatures.values.map(({ id, icon, subtitle, title }) => (
             <div key={id} className="flex items-start gap-4">
