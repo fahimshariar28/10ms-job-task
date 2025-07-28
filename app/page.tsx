@@ -58,7 +58,7 @@ export default async function Home() {
       </div>
 
       {/* Main Content */}
-      <div className="w-full lg:w-[70%]">
+      <div className="w-full md:w-[55%] lg:w-[70%]">
         {/* Instructor Details */}
         {/* @ts-ignore */}
         <CourseInstructor courseInstructor={instructor} />
