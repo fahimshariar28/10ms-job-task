@@ -68,8 +68,8 @@ export default function RightSidebar({
       <div
         className={`hidden md:block fixed md:top-2 lg:top-8 md:right-2 lg:right-16 transition-transform duration-300 z-50 ${
           isStickyVisible
-            ? "translate-y-0 opacity-100"
-            : "translate-y-32 opacity-0"
+            ? "translate-y-0 opacity-100 pointer-events-auto"
+            : "translate-y-32 opacity-0 pointer-events-none"
         }`}
       >
         <div className="bg-white border border-gray-300">
